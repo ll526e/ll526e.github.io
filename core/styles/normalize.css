@@ -1,0 +1,103 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial,
+    微軟正黑體,
+    'Microsoft JhengHei';
+  font-size: 16px;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 键盘操作焦点切换 使过度更平滑 */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/** 清除內外邊距 **/
+html,
+body,
+/* structural elements 結構元素 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+/* 块级引用元素 */
+div,
+/* list elements 列表元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+/* text formatting elements 文本格式元素 */
+pre,
+/* form elements 表單元素 */
+form,
+button,
+input,
+textarea,
+/* table elements 表單元素 */
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* 链接重置 */
+a {
+  color: #646cff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: 0;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* 斜體扶正 */
+em,
+i {
+  font-style: normal;
+}
+
+/** 重置列表元素 **/
+ul,
+li,
+ol,
+dl {
+  list-style: none;
+  font-style: normal;
+  user-select: none;
+}

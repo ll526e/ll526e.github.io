@@ -20,7 +20,27 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@style": [
+        "./core/styles"
+      ],
+      "@style/*": [
+        "./core/styles/*"
+      ],
+      "@components": [
+        "./core/components"
+      ],
+      "@components/*": [
+        "./core/components/*"
+      ],
+      "@hooks": [
+        "./core/hooks"
+      ],
+      "@hooks/*": [
+        "./core/hooks/*"
+      ],
+    }
   },
   "include": [
     "core",
