@@ -14,4 +14,11 @@ export default defineConfig({
     react(),
     AutoImport({ dts: 'types/auto-import.d.ts', imports: ['react'] })
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./core/styles/theme.scss";`
+      }
+    }
+  }
 })
