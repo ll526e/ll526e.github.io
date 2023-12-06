@@ -1,4 +1,3 @@
-import '@style/App.scss'
 import { Header, Content, Footer } from '@components'
 
 const App = () => {
