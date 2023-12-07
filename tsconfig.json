@@ -40,6 +40,9 @@
       "@hooks/*": [
         "./core/hooks/*"
       ],
+      "@pages/*": [
+        "./core/pages/*"
+      ],
     }
   },
   "include": [

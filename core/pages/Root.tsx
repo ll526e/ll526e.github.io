@@ -1,5 +1,4 @@
 import { Header, Content, Footer } from '@components'
-
 const App = () => {
   useEffect(() => {
 

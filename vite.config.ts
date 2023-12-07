@@ -8,6 +8,7 @@ export default defineConfig({
       '@style': resolve(__dirname, './core/styles'),
       '@components': resolve(__dirname, './core/components'),
       '@hooks': resolve(__dirname, './core/hooks'),
+      '@pages': resolve(__dirname, './core/pages'),
     }
   },
   plugins: [
@@ -17,7 +18,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./core/styles/theme.scss";`
+        additionalData: `@import "./core/styles/root/theme.scss";`
       }
     }
   }
