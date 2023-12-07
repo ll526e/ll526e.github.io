@@ -1,13 +1,20 @@
 import type { PropsWithChildren } from "react"
+import { Logo } from '@components'
 
-export const Header = (props: PropsWithChildren) => {
+interface HeaderProps extends PropsWithChildren {
+  extra?: JSX.Element
+}
+
+export const Header = (props: HeaderProps) => {
   return (
-    <header>
-      <h1>
-        {
-          props.children || '我来组成头部'
-        }
-      </h1>
+    <header className="header-wrap">
+      <Logo></Logo>
+      <div className="header-extra">
+        {props.extra}
+      </div>
+      <div className="header-slot">
+        {props.children}
+      </div>
     </header>
   )
 }

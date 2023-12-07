@@ -5,6 +5,7 @@ import { resolve } from 'path'
 export default defineConfig({
   resolve: {
     alias: {
+      '@assets': resolve(__dirname, './core/assets'),
       '@style': resolve(__dirname, './core/styles'),
       '@components': resolve(__dirname, './core/components'),
       '@hooks': resolve(__dirname, './core/hooks'),
