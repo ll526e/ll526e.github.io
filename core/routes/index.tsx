@@ -5,7 +5,7 @@ import Error from "@pages/Error";
 import Home from "@pages/Home";
 import Docs from "@pages/Docs";
 import Contact from "@pages/Contact";
-import BackStage from "@pages/BackStage";
+import Stage from "@pages/stage";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/stage",
-    element: <BackStage />,
+    element: <Stage />,
   }
 ]);
 
