@@ -19,8 +19,10 @@
   display: flex;
 
   .home-nav__item {
+    font-weight: bold;
+
     &.active {
-      color: #fff;
+      color: $link-primary;
     }
 
     &+.home-nav__item {

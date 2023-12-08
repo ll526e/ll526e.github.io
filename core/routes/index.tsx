@@ -2,11 +2,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "@pages/App";
 import Error from "@pages/Error";
-import Home from "@pages/Home";
-import Docs from "@pages/Docs";
-import Contact from "@pages/Contact";
+import Home from "@pages/home";
+import AboutUs from "@pages/about";
+import RoadMap from "@pages/roadmap";
 import Stage from "@pages/stage";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,12 +17,12 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/docs",
-        element: <Docs />
+        path: "/road-map",
+        element: <RoadMap />
       },
       {
-        path: "/contact",
-        element: <Contact />
+        path: "/about-us",
+        element: <AboutUs />
       },
     ],
   },

@@ -3,8 +3,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #213547;
-  background: linear-gradient(180deg, rgba(176, 238, 204, 1) 0%, rgba(241, 255, 248, 0) 100%);
+  background: linear-gradient(90deg, rgba(112, 225, 245, 1) 0%, rgba(255, 209, 148, 1) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,8 +13,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color: rgba(255, 255, 255, 0.87);
-    background: radial-gradient(farthest-side at 98.58% -4.32%, rgba(135, 122, 253, 0.82) 0%, rgba(43, 48, 92, 0.93) 68.53%, rgb(36, 37, 68) 100%);
+    background: radial-gradient(farthest-side at 88.58% -4.32%, rgba(135, 122, 253, 0.82) 0%, rgba(54, 60, 116, 0.93) 68.53%, rgba(43, 45, 82, 0.82) 100%);
   }
 }
 
@@ -74,6 +72,7 @@ td {
 
 /* 链接重置 */
 a {
+  color: $link;
   text-decoration: none;
   background-color: transparent;
   outline: 0;

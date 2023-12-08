@@ -14,7 +14,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    AutoImport({ dts: 'types/auto-import.d.ts', imports: ['react'] })
+    AutoImport({ dts: 'types/auto-import.d.ts', imports: ['react'] ,dirs: ['core/hooks']})
   ],
   css: {
     preprocessorOptions: {

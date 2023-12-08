@@ -1,4 +1,4 @@
-import './root/normalize.css'
+import './root/normalize.scss'
 import './root/app.scss'
 const autoImport = async () => {
   const modules = import.meta.glob('./modules/**/*[.css | .scss]')

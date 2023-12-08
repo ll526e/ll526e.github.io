@@ -2,8 +2,8 @@ import type { PropsWithChildren } from "react"
 
 export const Content = (props: PropsWithChildren) => {
   return (
-    <div className='content'>
+    <main className='container-wrap'>
       {props.children}
-    </div>
+    </main>
   )
 }

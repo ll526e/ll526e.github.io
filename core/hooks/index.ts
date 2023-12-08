@@ -1,1 +1,1 @@
-export * from './useDate'
+export * from './useDay'

@@ -1,11 +1,14 @@
 :root {
-  --color: red;
+  --link-default: #000;
+  --link-primary: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color: green;
+    --link-default: #877AFD;
+    --link-primary: #fff;
   }
 }
 
-$theme: var(--color);
+$link: var(--link-default);
+$link-primary: var(--link-primary);
