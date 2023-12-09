@@ -5,7 +5,8 @@ import Error from "@pages/Error";
 import Home from "@pages/home";
 import AboutUs from "@pages/about";
 import RoadMap from "@pages/roadmap";
-import Stage from "@pages/stage";
+import Stage from "./modules/stage";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,10 +27,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/stage",
-    element: <Stage />,
-  }
+  Stage
 ]);
 
 export const Routers = () => {
