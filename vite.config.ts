@@ -10,11 +10,12 @@ export default defineConfig({
       '@components': resolve(__dirname, './core/components'),
       '@hooks': resolve(__dirname, './core/hooks'),
       '@pages': resolve(__dirname, './core/pages'),
+      '@reducer': resolve(__dirname, './core/reducer'),
     }
   },
   plugins: [
     react(),
-    AutoImport({ dts: 'types/auto-import.d.ts', imports: ['react'] ,dirs: ['core/hooks']})
+    AutoImport({ dts: 'types/auto-import.d.ts', imports: ['react'], dirs: ['core/hooks'] })
   ],
   css: {
     preprocessorOptions: {

@@ -26,5 +26,6 @@ declare global {
   const useRef: typeof import('react')['useRef']
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
+  const useTheme: typeof import('../core/hooks/useTheme')['useTheme']
   const useTransition: typeof import('react')['useTransition']
 }

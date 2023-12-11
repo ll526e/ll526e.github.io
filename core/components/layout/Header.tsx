@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react"
-import { Logo } from '@components'
+import { Logo, ThemeSwitch } from '@components'
 
 interface HeaderProps extends PropsWithChildren {
   title?: JSX.Element
@@ -17,6 +17,7 @@ export const Header = (props: HeaderProps) => {
       </div>
       <div className="header-slot">
         {props.children}
+        <ThemeSwitch />
       </div>
     </header>
   )

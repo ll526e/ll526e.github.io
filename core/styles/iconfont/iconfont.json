@@ -1,0 +1,37 @@
+{
+  "id": "4367991",
+  "name": "stage",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5219464",
+      "name": "梨",
+      "font_class": "pear",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "15432422",
+      "name": "太阳",
+      "font_class": "light",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "15432437",
+      "name": "月亮",
+      "font_class": "dark",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "30121614",
+      "name": "自动",
+      "font_class": "auto",
+      "unicode": "e757",
+      "unicode_decimal": 59223
+    }
+  ]
+}

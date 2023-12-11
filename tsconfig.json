@@ -46,6 +46,9 @@
       "@pages/*": [
         "./core/pages/*"
       ],
+      "@reducer": [
+        "./core/reducer"
+      ],
     }
   },
   "include": [

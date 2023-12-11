@@ -18,14 +18,14 @@ class Cookie {
   }
 
   // 获取方法
-  public get(name: string) {
+  public get<T>(name: string): T | null {
     const nameEQ = `${name}=`;
     const ca = document.cookie.split(";");
     for (let i = 0; i < ca.length; i += 1) {
       let c = ca[i];
       while (c.charAt(0) === " ") c = c.substring(1, c.length);
       if (c.indexOf(nameEQ) === 0)
-        return c.substring(nameEQ.length, c.length);
+        return c.substring(nameEQ.length, c.length) as T;
     }
     return null;
   }
