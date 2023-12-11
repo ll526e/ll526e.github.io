@@ -15,7 +15,7 @@ interface InstanceReducer {
 }
 
 const initialState: InstanceState = {
-  theme: useCookie.get('theme') || 'auto'
+  theme: 'auto'
 }
 
 const InstanceContent = createContext<InstanceState>(initialState)

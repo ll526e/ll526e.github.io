@@ -1,9 +1,30 @@
 import { useDispatch, useApp, type InstanceState } from '@reducer'
 import { Svg } from './Svg'
+
 export const ThemeSwitch = () => {
   const { theme } = useApp()
   const dispatch = useDispatch()
   const ThemeMap: InstanceState['theme'][] = ['light', 'dark', 'auto']
+  const themeToken = useCookie.get<'light' | 'dark'>('theme')
+  const themeMedia = window.matchMedia("(prefers-color-scheme: light)")
+
+  useEffect(() => {
+    regTheme(themeMedia);
+    themeMedia.addEventListener('change', regTheme);
+    return () => {
+      themeMedia.removeEventListener('change', () => { });
+    }
+  }, []);
+
+  const regTheme = (media: MediaQueryListEventInit) => {
+    const str = themeToken || media.matches ? 'light' : 'dark'
+    dispatch({
+      type: 'change_theme', payload: {
+        theme: str
+      }
+    })
+  }
+
   const onThemeChange = (str: InstanceState['theme']) => {
     if (str === 'auto') {
       useCookie.remove('theme')
@@ -18,7 +39,10 @@ export const ThemeSwitch = () => {
   }
 
   const renderClassName = (str: InstanceState['theme']) => {
-    return str === theme ? 'theme-item active' : 'theme-item'
+    return useClassname({
+      'theme-item': true,
+      'active': str === theme
+    })
   }
 
   return (
