@@ -4,7 +4,11 @@ import { useApp } from '@reducer'
 const App = () => {
   const { theme } = useApp()
   useMemo(() => {
-    document.body.dataset.theme = theme
+    if (theme === 'auto') {
+      document.body.removeAttribute('data-theme')
+    } else {
+      document.body.dataset.theme = theme
+    }
   }, [theme])
 
   return (

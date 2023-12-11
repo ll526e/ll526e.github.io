@@ -4,7 +4,6 @@ export const ThemeSwitch = () => {
   const { theme } = useApp()
   const dispatch = useDispatch()
   const ThemeMap: InstanceState['theme'][] = ['light', 'dark', 'auto']
-
   const onThemeChange = (str: InstanceState['theme']) => {
     if (str === 'auto') {
       useCookie.remove('theme')

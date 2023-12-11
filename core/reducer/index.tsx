@@ -1,4 +1,4 @@
-import { type PropsWithChildren, createContext, Dispatch, ReducerState, ReducerWithoutAction } from "react";
+import { type PropsWithChildren, createContext, Dispatch, ReducerWithoutAction } from "react";
 
 export interface InstanceState {
   theme: 'light' | 'dark' | 'auto'
