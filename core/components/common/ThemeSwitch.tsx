@@ -39,7 +39,7 @@ export const ThemeSwitch = () => {
   }
 
   const renderClassName = (str: InstanceState['theme']) => {
-    return useClassname({
+    return useClassnames({
       'theme-item': true,
       'active': str === theme
     })

@@ -11,7 +11,7 @@ declare global {
   const memo: typeof import('react')['memo']
   const startTransition: typeof import('react')['startTransition']
   const useCallback: typeof import('react')['useCallback']
-  const useClassname: typeof import('../core/hooks/useBasic')['useClassname']
+  const useClassnames: typeof import('../core/hooks/useBasic')['useClassnames']
   const useContext: typeof import('react')['useContext']
   const useCookie: typeof import('../core/hooks/useCookie')['useCookie']
   const useDay: typeof import('../core/hooks/useBasic')['useDay']
@@ -27,6 +27,5 @@ declare global {
   const useRef: typeof import('react')['useRef']
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
-  const useTheme: typeof import('../core/hooks/useTheme')['useTheme']
   const useTransition: typeof import('react')['useTransition']
 }

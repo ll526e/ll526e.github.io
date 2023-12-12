@@ -2,9 +2,9 @@ import dayjs from 'dayjs';
 import classnames from 'classnames';
 
 const useDay = dayjs
-const useClassname = classnames
+const useClassnames = classnames
 
 export {
   useDay,
-  useClassname
+  useClassnames
 }
