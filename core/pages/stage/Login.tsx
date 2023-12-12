@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { BaseSyntheticEvent } from 'react'
+import { Input } from '@mui/material'
 interface LoginFormData {
   username: string
   password: string
@@ -38,13 +39,13 @@ const Login = () => {
         <label>
           <span>账号</span>
         </label>
-        <input type="text" autoComplete="off" name="username" onInput={onInput} />
+        <Input autoComplete="off" name="username" onInput={onInput} />
       </div>
       <div className="stage-form-item">
         <label>
           <span>密码</span>
         </label>
-        <input type="text" autoComplete="off" name="password" onInput={onInput} />
+        <Input autoComplete="off" name="password" onInput={onInput} />
       </div>
       <div className="stage-form-item">
         <button type="button" onClick={setCookie}>Entry Stage</button>

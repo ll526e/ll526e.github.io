@@ -1,3 +1,17 @@
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, rgba(255, 209, 148, 0.82) 0%, rgba(112, 225, 245, 0.92) 100%);
+}
+
+.dark {
+  color-scheme: dark;
+  background: linear-gradient(135deg, rgb(58, 22, 90) 0%, rgb(67, 154, 162) 100%);
+}
+
 #root {
   padding: 0 12px;
 }

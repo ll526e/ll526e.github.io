@@ -1,7 +1,7 @@
 import { type PropsWithChildren, createContext, type Dispatch, type ReducerWithoutAction } from "react";
 
 export interface InstanceState {
-  theme: 'light' | 'dark' | 'auto'
+  theme: 'light' | 'dark' | ''
 }
 
 interface InstanceAction {
@@ -15,7 +15,7 @@ interface InstanceReducer {
 }
 
 const initialState: InstanceState = {
-  theme: 'auto'
+  theme: useCookie.get('theme') || ''
 }
 
 const InstanceContent = createContext<InstanceState>(initialState)
