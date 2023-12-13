@@ -11,11 +11,11 @@ interface LoginFormData {
 const Login = () => {
   const navigate = useNavigate()
   const [formState, setFormState] = useState({} as LoginFormData)
-  const [message] = useMessage()
+  const [message, contextHandle] = useMessage()
 
   const setCookie = () => {
     if (!formState.username || !formState.password) {
-      message.open({
+      message.warning({
         content: '请输入账号密码',
         type: 'warning'
       })
@@ -59,6 +59,7 @@ const Login = () => {
 
   return (
     <Form className="login-wrap">
+      {contextHandle}
       <Form.Item label="账号" className="stage-form-item">
         <Input name="username" onChange={onChange} />
       </Form.Item>
