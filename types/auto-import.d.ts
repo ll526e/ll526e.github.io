@@ -23,6 +23,7 @@ declare global {
   const useInsertionEffect: typeof import('react')['useInsertionEffect']
   const useLayoutEffect: typeof import('react')['useLayoutEffect']
   const useMemo: typeof import('react')['useMemo']
+  const useMessage: typeof import('../core/hooks/useBasic')['useMessage']
   const useReducer: typeof import('react')['useReducer']
   const useRef: typeof import('react')['useRef']
   const useState: typeof import('react')['useState']

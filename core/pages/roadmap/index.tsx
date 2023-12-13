@@ -1,8 +1,8 @@
-import { Button } from '@mui/material'
+import { Button } from 'antd'
 const RoadMap = () => {
   return (
     <div className="road-map-wrap">
-      <Button variant="contained">RoadMap</Button>
+      <Button type="primary">RoadMap</Button>
     </div>
   );
 }

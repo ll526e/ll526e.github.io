@@ -22,7 +22,7 @@ const StageIndex = () => {
   }
 
   return (
-    <div className="stage-home">
+    <div className="stage-wrap">
       <Header title={<em onClick={onLinkHome}>&nbsp;-&nbsp;stage</em>}></Header>
       <Outlet />
     </div>

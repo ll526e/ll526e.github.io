@@ -37,9 +37,15 @@ const InstanceReducer = (state: InstanceState, action: InstanceAction) => {
 }
 
 const InstanceProvider = (props: PropsWithChildren) => {
-  const [tasks, dispatch] = useReducer(InstanceReducer, initialState)
+  const [state, dispatch] = useReducer(InstanceReducer, initialState)
+  const { theme } = state
+  useMemo(() => {
+    const el = document.querySelector('html')
+    el?.classList.toggle('dark', theme === 'dark')
+  }, [theme])
+
   return (
-    <InstanceContent.Provider value={tasks}>
+    <InstanceContent.Provider value={state}>
       <InstanceDispatch.Provider value={dispatch}>
         {props.children}
       </ InstanceDispatch.Provider>
