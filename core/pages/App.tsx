@@ -3,14 +3,14 @@ import { HomeNav } from '@components/home'
 import { Outlet } from 'react-router-dom'
 const App = () => {
   return (
-    <>
+    <div className='app-wrap content'>
       <Header>
         <HomeNav />
       </Header>
       <Content>
         <Outlet />
       </Content>
-    </>
+    </div>
   )
 }
 

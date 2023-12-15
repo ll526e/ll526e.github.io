@@ -20,7 +20,7 @@ const StageIndex = () => {
   }
 
   return (
-    <div className="stage-wrap">
+    <div className="stage-wrap content">
       <Header extra={<HeaderExtra />}>
         <HeaderTool />
       </Header>
