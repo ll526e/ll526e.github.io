@@ -1,5 +1,6 @@
 import Stage from "@pages/stage";
-import StageLogin from "@pages/stage/Login";
+import Login from "@pages/stage/Login";
+import Home from "@pages/stage/home";
 import { RouteObject } from 'react-router-dom'
 const StageRouter: RouteObject = {
   path: "/stage",
@@ -7,7 +8,11 @@ const StageRouter: RouteObject = {
   children: [
     {
       path: "login",
-      element: <StageLogin />
+      element: <Login />
+    },
+    {
+      path: "home",
+      element: <Home />
     }
   ]
 }

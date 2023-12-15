@@ -1,11 +1,10 @@
-import type { PropsWithChildren } from "react"
 import { Link } from "react-router-dom"
+import LogoSVG from '@assets/logo.svg'
 
-export const Logo = (props: PropsWithChildren) => {
+export const Logo = () => {
   return (
     <Link to='/' className='logo'>
-      <strong>Pear</strong>
-      <span className="extend"> {props.children} </span>
+      <img src={LogoSVG} height={36} alt="Pear Website" />
     </Link>
   )
 }

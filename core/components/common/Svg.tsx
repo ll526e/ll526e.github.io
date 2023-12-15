@@ -5,17 +5,10 @@ interface SvgProps {
 }
 
 export const Svg = (props: SvgProps) => {
-
-  const mergeClassName = () => {
-    let className = 'icon'
-    if (props.className) {
-      className += ' ' + props.className
-    }
-    return className
-  }
+  const mergeClassName = useClassnames(['icon', props.className])
 
   return (
-    <svg className={mergeClassName()} aria-hidden="true" onClick={props.onClick}>
+    <svg className={mergeClassName} aria-hidden="true" onClick={props.onClick}>
       <use xlinkHref={`#icon-${props.name}`}></use>
     </svg>
   )

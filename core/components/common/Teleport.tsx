@@ -2,18 +2,18 @@ import type { PropsWithChildren } from "react";
 import { createPortal } from "react-dom";
 
 interface TeleportProps extends PropsWithChildren {
-  target?: HTMLElement | string
+  to?: HTMLElement | string
 }
 
 export const Teleport = (props: TeleportProps) => {
-  const { target = document.body } = props
-  const [targetElement, setTargetElement] = useState<TeleportProps['target']>(target)
-  const isElement = target instanceof HTMLElement
+  const { to = document.body } = props
+  const [targetElement, setTargetElement] = useState<TeleportProps['to']>(to)
+  const isElement = to instanceof HTMLElement
   useEffect(() => {
     if (isElement) {
-      setTargetElement(target as HTMLElement)
-    } else if (typeof target === 'string') {
-      const el = document.querySelector(target)
+      setTargetElement(to as HTMLElement)
+    } else if (typeof to === 'string') {
+      const el = document.querySelector(to)
       if (el) setTargetElement(el as HTMLElement)
     } else {
       throw Error('target must be a HTMLElement or a string')

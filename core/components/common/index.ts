@@ -1,3 +1,3 @@
 export * from './Logo'
-export * from './HomeNav'
+export * from './Teleport'
 export * from './ThemeSwitch'

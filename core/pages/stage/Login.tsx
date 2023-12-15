@@ -36,7 +36,7 @@ const Login = () => {
             onClose() {
               useCookie.set('token', '1', {
                 onsuccess() {
-                  navigate('/stage')
+                  navigate('/stage/home')
                 },
               })
             },

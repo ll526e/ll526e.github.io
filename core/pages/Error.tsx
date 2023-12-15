@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import { Header } from "@components";
+import { Header } from "@components/layout";
 interface ErrorResponse {
   data: string
   error: {
