@@ -28,12 +28,12 @@ const Login = () => {
       content: '正在登录..',
       duration: 2.5,
     }).then(() => {
-      setLoading(false)
       message.open({
         content: '登录成功',
         type: 'success',
-        duration: 1.5,
+        duration: 1,
         onClose() {
+          setLoading(false)
           useCookie.set('token', '1', {
             onsuccess() {
               navigate('/stage/home')
