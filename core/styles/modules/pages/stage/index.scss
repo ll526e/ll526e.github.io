@@ -22,16 +22,21 @@
     .title {
       font-size: 24px;
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .sub-title {
       font-weight: 400;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .form-item {
       width: 80%;
+      margin-bottom: 8px;
+    }
+
+    .form-submit {
+      width: 50%;
     }
   }
 }
