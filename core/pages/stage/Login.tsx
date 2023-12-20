@@ -1,12 +1,8 @@
-// import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import type { BaseSyntheticEvent } from 'react'
 import { Field, Input, Button } from "@fluentui/react-components";
 import { useApp } from '@reducer';
-import {
-  Toast,
-  ToastTitle,
-} from "@fluentui/react-components";
-
+import { useCookie } from "@hooks";
 interface LoginFormData {
   username: string
   password: string
@@ -14,20 +10,37 @@ interface LoginFormData {
 }
 
 const Login = () => {
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const [formState, setFormState] = useState({} as LoginFormData)
   const [loading, setLoading] = useState(false)
   const { useToast } = useApp()
+
   const setCookie = () => {
     if (!formState.username || !formState.password) {
-      useToast.dispatchToast(<Toast>
-        <ToastTitle>请输入账号密码</ToastTitle>
-      </Toast>,
-        { intent: "warning" })
+      useToast.message({
+        content: '账号、密码不可为空',
+        intent: 'warning'
+      })
       return
     }
     setLoading(true)
-
+    useToast.loading({
+      content: '登录中...',
+    })
+    setTimeout(() => {
+      useToast.update({
+        content: '登录成功',
+        intent: 'success',
+        timeout: 2000,
+        onStatusChange(_, { status }) {
+          if (status === 'dismissed') {
+            useCookie.set('token', '1')
+            setLoading(false)
+            navigate('/stage/home')
+          }
+        },
+      })
+    }, 3000);
   }
   const onChange = (e: BaseSyntheticEvent) => {
     const { value, checked, name } = e.target
@@ -37,7 +50,6 @@ const Login = () => {
     })
   }
 
-
   return (
     <div className="login-wrap">
       <div className="title">Welcome Stage</div>
@@ -46,10 +58,10 @@ const Login = () => {
       </div>
 
       <Field label="账号" className="form-item">
-        <Input name="username" disabled={loading} onChange={onChange} />
+        <Input name="username" disabled={loading} autoComplete="off" onChange={onChange} />
       </Field>
       <Field label="密码" className="form-item">
-        <Input name="password" disabled={loading} onChange={onChange} />
+        <Input name="password" disabled={loading} autoComplete="off" onChange={onChange} />
       </Field>
       <Field label="" className="form-item">
         <Button className="form-submit" disabled={loading} appearance="primary" onClick={setCookie}>Next</Button>

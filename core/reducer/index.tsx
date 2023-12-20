@@ -1,11 +1,25 @@
 import { type PropsWithChildren, createContext, type Dispatch, type ReducerWithoutAction } from "react";
-import { useToastController } from '@fluentui/react-components'
+import { useToastController, ToastIntent } from '@fluentui/react-components'
 import { omit } from '@utils'
 type ToastController = ReturnType<typeof useToastController>
 
+interface Message {
+  content: string
+  intent?: ToastIntent
+}
+
+export interface ToastExtend {
+  message: (options: Message) => void
+  loading: (options: Message) => void
+  update: (options: Omit<Parameters<ToastController['updateToast']>[0], 'toastId'> & Message) => void
+}
+
+export type ToastInstance = ToastController & ToastExtend
+
 export interface InstanceState {
   theme: 'light' | 'dark' | '',
-  useToast: ToastController,
+  toastId: string,
+  useToast: ToastInstance,
 }
 
 interface InstanceAction {
@@ -20,7 +34,8 @@ interface InstanceReducer {
 
 const initialState: InstanceState = {
   theme: useCookie.get('theme') || '',
-  useToast: {} as ToastController,
+  toastId: '',
+  useToast: {} as ToastInstance,
 }
 
 const InstanceContent = createContext<InstanceState>(initialState)
@@ -37,6 +52,7 @@ const InstanceReducer = (state: InstanceState, action: InstanceAction) => {
     case 'register_toast': {
       return {
         ...state,
+        toastId: action.payload.toastId,
         useToast: action.payload.useToast,
       }
     }
