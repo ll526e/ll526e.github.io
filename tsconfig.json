@@ -49,6 +49,9 @@
       "@reducer": [
         "./core/reducer"
       ],
+      "@utils": [
+        "./core/utils"
+      ],
     }
   },
   "include": [

@@ -11,6 +11,7 @@ export default defineConfig({
       '@hooks': resolve(__dirname, './core/hooks'),
       '@pages': resolve(__dirname, './core/pages'),
       '@reducer': resolve(__dirname, './core/reducer'),
+      '@utils': resolve(__dirname, './core/utils'),
     }
   },
   plugins: [

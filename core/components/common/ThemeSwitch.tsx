@@ -1,9 +1,8 @@
-import { useDispatch, useApp } from '@reducer'
+import { useApp } from '@reducer'
 import { Svg } from './Svg'
 
 export const ThemeSwitch = () => {
-  const { theme } = useApp()
-  const dispatch = useDispatch()
+  const { state: { theme }, dispatch } = useApp()
   const themeToken = useCookie.get<'light' | 'dark'>('theme')
   const themeMedia = window.matchMedia("(prefers-color-scheme: light)")
 

@@ -1,6 +1,11 @@
 // import { useNavigate } from "react-router-dom"
 import type { BaseSyntheticEvent } from 'react'
 import { Field, Input, Button } from "@fluentui/react-components";
+import { useApp } from '@reducer';
+import {
+  Toast,
+  ToastTitle,
+} from "@fluentui/react-components";
 
 interface LoginFormData {
   username: string
@@ -12,9 +17,13 @@ const Login = () => {
   // const navigate = useNavigate()
   const [formState, setFormState] = useState({} as LoginFormData)
   const [loading, setLoading] = useState(false)
+  const { useToast } = useApp()
   const setCookie = () => {
     if (!formState.username || !formState.password) {
-
+      useToast.dispatchToast(<Toast>
+        <ToastTitle>请输入账号密码</ToastTitle>
+      </Toast>,
+        { intent: "warning" })
       return
     }
     setLoading(true)
