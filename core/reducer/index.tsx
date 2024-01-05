@@ -65,7 +65,7 @@ const InstanceReducer = (state: InstanceState, action: InstanceAction) => {
 const InstanceProvider = (props: PropsWithChildren) => {
   const [state, dispatch] = useReducer(InstanceReducer, initialState)
   const { theme } = state
-  useMemo(() => {
+  useEffect(() => {
     const el = document.querySelector('html')
     el?.classList.toggle('dark', theme === 'dark')
   }, [theme])
