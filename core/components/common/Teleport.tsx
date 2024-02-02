@@ -20,7 +20,6 @@ export const Teleport = (props: TeleportProps) => {
     }
   }, [])
 
-
   return (
     <>
       {createPortal(props.children, targetElement as HTMLElement)}
