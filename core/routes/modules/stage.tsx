@@ -8,7 +8,12 @@ const StageRouter: RouteObject = {
   children: [
     {
       path: "login",
-      element: <Login />
+      element: <Login />,
+      loader: () => {
+        return {
+          name: "login"
+        }
+      }
     },
     {
       path: "home",

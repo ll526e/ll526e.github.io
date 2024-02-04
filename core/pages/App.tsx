@@ -4,8 +4,8 @@ import { Outlet } from 'react-router-dom'
 const App = () => {
   return (
     <div className='app-wrap content'>
-      <Header>
-        <HomeNav />
+      <Header tool={<HomeNav />}>
+
       </Header>
       <Content>
         <Outlet />

@@ -1,10 +1,10 @@
-import type { PropsWithChildren } from "react"
 import { Logo, ThemeSwitch } from '@components/common'
 
-interface HeaderProps extends PropsWithChildren {
+interface HeaderProps {
   className?: string
   title?: JSX.Element
-  extra?: JSX.Element
+  extra?: JSX.Element | null
+  tool?: JSX.Element | null
 }
 
 export const Header = (props: HeaderProps) => {
@@ -16,7 +16,7 @@ export const Header = (props: HeaderProps) => {
         {props.extra}
       </div>
       <div className="header-slot">
-        {props.children}
+        {props.tool}
         <ThemeSwitch />
       </div>
     </header>

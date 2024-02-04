@@ -1,29 +1,39 @@
 import { Header } from "@components/layout"
 import { HeaderExtra, HeaderTool } from "@components/stage"
-import { Outlet, useNavigate } from "react-router-dom"
+import { Outlet, useNavigate, useLocation } from "react-router-dom"
 
 const StageIndex = () => {
   const navigate = useNavigate()
-  const token = useMemo(() => useCookie.get('token'), [])
-
-  useEffect(() => {
-    pagerHandle()
-  }, [])
+  const location = useLocation()
+  const token = useCookie.get('token')
 
   // 是否已登录
-  const pagerHandle = () => {
+  const pagerHandle = useCallback(() => {
     if (!token) {
       navigate('/stage/login')
     } else {
       navigate('/stage/home')
     }
-  }
+  }, [navigate, token])
+
+  useEffect(() => {
+    pagerHandle()
+  }, [pagerHandle])
+
+  // header extra and tool
+  const headerExtra = useMemo(() => {
+    if (location.pathname === '/stage/login') {
+      return {}
+    }
+    return {
+      extra: <HeaderExtra />,
+      tool: <HeaderTool />
+    }
+  }, [location])
 
   return (
     <div className="stage-wrap content">
-      <Header extra={<HeaderExtra />}>
-        <HeaderTool />
-      </Header>
+      <Header {...headerExtra} />
       <Outlet />
     </div>
   )

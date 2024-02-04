@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "10693598",
+      "name": "退出",
+      "font_class": "exit",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "10026553",
+      "name": "个人",
+      "font_class": "person",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
       "icon_id": "5219464",
       "name": "梨",
       "font_class": "pear",

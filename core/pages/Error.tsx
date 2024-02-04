@@ -11,7 +11,7 @@ interface ErrorResponse {
 }
 
 const Error = () => {
-  let error = useRouteError() as ErrorResponse;
+  const error = useRouteError() as ErrorResponse;
   return (
     <div className="error-bundle">
       <Header></Header>
