@@ -8,7 +8,7 @@ export const FluentContext = (props: PropsWithChildren) => {
   const toasterId = useId("toaster");
   const useToast = useToastController(toasterId);
 
-  const extendToast: ToastExtend = {
+  const extendToast: ToastExtend = useMemo(() => ({
     message: (options) => {
       const { content, intent = 'info' } = options
       return useToast.dispatchToast(<Toast>
@@ -38,7 +38,7 @@ export const FluentContext = (props: PropsWithChildren) => {
         toastId: toasterId,
       })
     },
-  }
+  }), [useToast, toasterId])
 
   useEffect(() => {
     dispatch({
@@ -51,7 +51,7 @@ export const FluentContext = (props: PropsWithChildren) => {
         }
       }
     })
-  }, [])
+  }, [dispatch, extendToast, toasterId, useToast])
 
   const dynamicTheme = useMemo(() => {
     return theme === 'dark' ? customTheme.dark : customTheme.light

@@ -20,6 +20,13 @@
       "unicode_decimal": 60866
     },
     {
+      "icon_id": "39229233",
+      "name": "错误",
+      "font_class": "error-light-copy",
+      "unicode": "edc5",
+      "unicode_decimal": 60869
+    },
+    {
       "icon_id": "10693598",
       "name": "退出",
       "font_class": "exit",
@@ -27,11 +34,25 @@
       "unicode_decimal": 58902
     },
     {
+      "icon_id": "39229216",
+      "name": "退出",
+      "font_class": "exit-light",
+      "unicode": "edc3",
+      "unicode_decimal": 60867
+    },
+    {
       "icon_id": "10026553",
       "name": "个人",
       "font_class": "person",
       "unicode": "e679",
       "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "39229226",
+      "name": "个人",
+      "font_class": "person-light",
+      "unicode": "edc4",
+      "unicode_decimal": 60868
     },
     {
       "icon_id": "5219464",
@@ -53,13 +74,6 @@
       "font_class": "dark",
       "unicode": "e6a2",
       "unicode_decimal": 59042
-    },
-    {
-      "icon_id": "30121614",
-      "name": "自动",
-      "font_class": "auto",
-      "unicode": "e757",
-      "unicode_decimal": 59223
     }
   ]
 }

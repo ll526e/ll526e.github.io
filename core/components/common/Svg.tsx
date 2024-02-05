@@ -6,7 +6,7 @@ interface SvgProps {
 }
 
 export const Svg = (props: SvgProps) => {
-  const { size = 14 } = props
+  const { size = 16 } = props
   const mergeClassName = useClassnames(['sa', props.className])
 
   return (

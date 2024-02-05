@@ -16,14 +16,16 @@ const Login = () => {
   const { useToast } = useApp()
 
   const setCookie = () => {
+
     if (!formState.username || !formState.password) {
       useToast.message({
         content: '账号、密码不可为空',
-        intent: 'warning'
+        intent: 'warning',
       })
       return
     }
     setLoading(true)
+    useToast.dismissAllToasts()
     useToast.loading({
       content: '登录中...',
     })

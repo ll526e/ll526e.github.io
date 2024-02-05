@@ -15,7 +15,7 @@ export const ThemeSwitch = () => {
   }
 
   return (
-    <div className="theme-wrap">
+    <div className="theme-wrap cursor-pointer">
       <Svg name={theme} onClick={onThemeChange} />
     </div>
   )

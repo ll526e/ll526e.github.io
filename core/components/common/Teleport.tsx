@@ -8,7 +8,7 @@ interface TeleportProps extends PropsWithChildren {
 export const Teleport = (props: TeleportProps) => {
   const { to = document.body } = props
   const [targetElement, setTargetElement] = useState<TeleportProps['to']>(to)
-  const isElement = to instanceof HTMLElement
+  const isElement = useMemo(() => to instanceof HTMLElement, [to])
   useEffect(() => {
     if (isElement) {
       setTargetElement(to as HTMLElement)
@@ -18,7 +18,7 @@ export const Teleport = (props: TeleportProps) => {
     } else {
       throw Error('target must be a HTMLElement or a string')
     }
-  }, [])
+  }, [isElement, to])
 
   return (
     <>
