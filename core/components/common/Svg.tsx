@@ -6,11 +6,12 @@ interface SvgProps {
 }
 
 export const Svg = (props: SvgProps) => {
-  const mergeClassName = useClassnames(['icon', props.className, props.size ? `font-size-${props.size}px` : ''])
+  const { size = 14 } = props
+  const mergeClassName = useClassnames(['sa', props.className])
 
   return (
-    <svg className={mergeClassName} aria-hidden="true" onClick={props.onClick}>
-      <use xlinkHref={`#icon-${props.name}`}></use>
+    <svg className={mergeClassName} style={{ fontSize: `${size + 'px'}` }} aria-hidden="true" onClick={props.onClick}>
+      <use xlinkHref={`#sa-${props.name}`}></use>
     </svg>
   )
 }

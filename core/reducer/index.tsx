@@ -33,7 +33,7 @@ interface InstanceReducer {
 }
 
 const initialState: InstanceState = {
-  theme: useCookie.get('theme') || '',
+  theme: useCookie.get('theme') || 'light',
   toastId: '',
   useToast: {} as ToastInstance,
 }

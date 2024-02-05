@@ -2,9 +2,23 @@
   "id": "4367991",
   "name": "stage",
   "font_family": "iconfont",
-  "css_prefix_text": "icon-",
+  "css_prefix_text": "sa-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "1256486",
+      "name": "展开",
+      "font_class": "arrow",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "29916608",
+      "name": "错误",
+      "font_class": "error",
+      "unicode": "edc2",
+      "unicode_decimal": 60866
+    },
     {
       "icon_id": "10693598",
       "name": "退出",
