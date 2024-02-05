@@ -17,14 +17,14 @@ export interface ToastExtend {
 export type ToastInstance = ToastController & ToastExtend
 
 export interface InstanceState {
-  theme: 'light' | 'dark' | '',
+  theme: string,
   toastId: string,
   useToast: ToastInstance,
 }
 
 interface InstanceAction {
   type: string
-  payload: any
+  payload: Record<string, any>
 }
 
 interface InstanceReducer {
