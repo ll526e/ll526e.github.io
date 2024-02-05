@@ -24,7 +24,8 @@ export const HeaderTool = () => {
           presence={{ status: "available" }}
           avatar={{
             image: {
-              src: "https://gravatar.com/userimage/224128994/d5ef703baaa37c449015605a25e75d52.jpeg?size=256",
+              src: "https://gravatar.com/userimage/224128994/d5ef703baaa37c449015605a25e75d52.jpeg",
+              alt: "小鱼儿",
             },
           }} />
       </MenuTrigger>

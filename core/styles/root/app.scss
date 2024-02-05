@@ -4,10 +4,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, rgba(191, 233, 255, 1) 0%, rgba(255, 110, 127, 1) 100%);
+
 }
 
 .dark {
   color-scheme: dark;
+  background: linear-gradient(90deg, rgba(5, 24, 181, 1) 0%, rgba(195, 55, 100, 1) 100%);
 }
 
 #root {
