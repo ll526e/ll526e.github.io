@@ -1,5 +1,5 @@
 import { Header } from "@components/layout"
-import { HeaderExtra, HeaderTool } from "@components/stage"
+import { HeaderExtra, HeaderTool } from "./component"
 import { Outlet, useNavigate, useLocation } from "react-router-dom"
 
 const StageIndex = () => {
