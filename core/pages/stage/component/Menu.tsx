@@ -27,7 +27,7 @@ export const Menu = (props: ContentMenuProps) => {
         NavList.map((item, index) => {
           return (
             <MenuItem as="div" key={index}>
-              <NavLink to={item.path} className="content-menu-link" end>
+              <NavLink to={item.path} className="content-menu-link" end unstable_viewTransition>
                 {item.name}
               </NavLink>
             </MenuItem>

@@ -9,7 +9,7 @@ const Home = () => {
         <div className="sub-title">
           Port Finance is a lending protocol that aims to provide an entire suite of fixed income products including variable rate lending, fixed rate lending and interest rate swaps
         </div>
-        <NavLink to="/stage" className="open-stage">
+        <NavLink to="/stage" className="open-stage" unstable_viewTransition>
           Open Stage
         </NavLink>
       </div>
