@@ -38,7 +38,7 @@ const Login = () => {
           if (status === 'dismissed') {
             useCookie.set('token', '1')
             setLoading(false)
-            navigate('/stage/home')
+            navigate('/stage/workspace')
           }
         },
       })

@@ -1,8 +1,13 @@
 import type { PropsWithChildren } from "react"
 
-export const Content = (props: PropsWithChildren) => {
+interface ContentProps extends PropsWithChildren {
+  className?: string
+}
+
+export const Content = (props: ContentProps) => {
+  const mergeClassName = useClassnames(['container-wrap', props.className])
   return (
-    <main className='container-wrap'>
+    <main className={mergeClassName}>
       {props.children}
     </main>
   )

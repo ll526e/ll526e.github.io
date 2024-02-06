@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
-export const HomeNav = () => {
+
+export const NavBar = () => {
   const navList = [
     {
       name: 'Road Map',

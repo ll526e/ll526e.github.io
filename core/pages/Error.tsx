@@ -19,34 +19,25 @@ interface ErrorResponse {
   statusText: string
 }
 
-interface HeaderTextProps {
-  error: ErrorResponse
-}
-
-const HeaderText = (props: HeaderTextProps) => {
-  const { error } = props;
-  return (
-    <Text >
-      <span>{error.status}: {error.statusText}</span>
-    </Text>
-  )
-}
-
 const Error = () => {
   const navigate = useNavigate();
   const error = useRouteError() as ErrorResponse;
   const onBack = () => {
-    navigate('/')
+    navigate('/', { replace: true })
   }
   return (
     <div className="error-bundle">
-      <Header></Header>
+      <Header />
       <div className="error-bundle_inner">
         <Card>
           <CardHeader
             image={<Svg name="error" size={36} />}
             header={<Text>糟糕，出问题了～</Text>}
-            description={<HeaderText error={error} />}
+            description={
+              <Text >
+                <span>{error.status}: {error.statusText}</span>
+              </Text>
+            }
           />
 
           <Text size={400}>
@@ -54,7 +45,7 @@ const Error = () => {
           </Text>
 
           <CardFooter>
-            <Button size="small" onClick={onBack}>返回首页</Button>
+            <Button size="small" onClick={onBack}>Back Stage</Button>
           </CardFooter>
         </Card>
       </div>

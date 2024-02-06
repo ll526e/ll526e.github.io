@@ -1,12 +1,10 @@
-import { Header, Content } from '@components/layout'
-import { HomeNav } from '@components/home'
+import { Header, Content, NavBar } from '@components/layout'
 import { Outlet } from 'react-router-dom'
+
 const App = () => {
   return (
     <div className='app-wrap content'>
-      <Header tool={<HomeNav />}>
-
-      </Header>
+      <Header tool={<NavBar />} />
       <Content>
         <Outlet />
       </Content>
